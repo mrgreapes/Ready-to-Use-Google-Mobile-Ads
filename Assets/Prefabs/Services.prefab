@@ -498,6 +498,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AdsServiceProduction
       objectReference: {fileID: 0}
+    - target: {fileID: 1885447191924711484, guid: be1bfeca8e74cb04b88fbd2e627af48a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7257728628006680849, guid: be1bfeca8e74cb04b88fbd2e627af48a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
