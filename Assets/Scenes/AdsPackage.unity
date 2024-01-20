@@ -1332,6 +1332,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6136736057653254008, guid: 5e281a7684c489744a991bb2a7c7453d, type: 3}
+      propertyPath: _showAppOpenAd
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6136736057653254008, guid: 5e281a7684c489744a991bb2a7c7453d, type: 3}
+      propertyPath: _showRewardedAd
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6136736057653254008, guid: 5e281a7684c489744a991bb2a7c7453d, type: 3}
+      propertyPath: _showRewardedInterstitial
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7751595045109796592, guid: 5e281a7684c489744a991bb2a7c7453d, type: 3}
       propertyPath: m_Name
       value: Services
