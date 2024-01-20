@@ -1,5 +1,7 @@
 fileFormatVersion: 2
-guid: 38f27672f94d722458e077768260bfa3
+guid: f5e6f0ae586601d42b761034d28898ac
+labels:
+- NuGetForUnity
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -12,21 +14,10 @@ PluginImporter:
   validateReferences: 1
   platformData:
   - first:
-      Android: Android
+      Any: 
     second:
       enabled: 1
       settings: {}
-  - first:
-      Any: 
-    second:
-      enabled: 0
-      settings: {}
-  - first:
-      Editor: Editor
-    second:
-      enabled: 0
-      settings:
-        DefaultValueInitialized: true
   userData: 
   assetBundleName: 
   assetBundleVariant: 

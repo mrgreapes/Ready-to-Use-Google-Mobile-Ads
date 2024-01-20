@@ -1,0 +1,25 @@
+
+public enum GameSounds{
+    PLAYBTNSOUND,
+    SELECTBTNSOUND,
+    NORMALBTNSOUND,
+    CARDFLIPSOUND,
+    MATCHSOUND,
+    WINGAMESOUND,
+    LOSEGAMESOUND,
+    EXITGAMESOUND,
+    CUSTOMSOUND,
+}
+
+public enum GameMusic{
+    MAINMENUMUSIC,
+    LOADINGMUSIC,
+    GAMEPLAYMUSIC,
+    CUSTOMMUSIC,
+}
+
+public enum ClickableObject{
+    BUTTON,
+    IMAGE,
+    ONENABLE,
+}

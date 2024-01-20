@@ -22,42 +22,45 @@ public class GoogleMobileAdsController : MonoBehaviour
     // The Google Mobile Ads Unity plugin needs to be run only once.
     private static bool? _isInitialized;
 
-    // Helper class that implements consent using the
-    // Google User Messaging Platform (UMP) Unity plugin.
-    [SerializeField, Tooltip("Controller for the Google User Messaging Platform (UMP) Unity plugin.")]
-    private GoogleMobileAdsConsentController _consentController;
-
     /// <summary>
     /// Demonstrates how to configure Google Mobile Ads Unity plugin.
     /// </summary>
     private void Start()
     {
+        InitAds();
         // On Android, Unity is paused when displaying interstitial or rewarded video.
         // This setting makes iOS behave consistently with Android.
-        MobileAds.SetiOSAppPauseOnBackground(true);
 
         // When true all events raised by GoogleMobileAds will be raised
         // on the Unity main thread. The default value is false.
         // https://developers.google.com/admob/unity/quick-start#raise_ad_events_on_the_unity_main_thread
-        MobileAds.RaiseAdEventsOnUnityMainThread = true;
 
         // Configure your RequestConfiguration with Child Directed Treatment
         // and the Test Device Ids.
-        MobileAds.SetRequestConfiguration(new RequestConfiguration
-        {
-            TestDeviceIds = TestDeviceIds
-        });
+        // MobileAds.SetRequestConfiguration(new RequestConfiguration
+        // {
+        //     TagForUnderAgeOfConsent = TagForUnderAgeOfConsent.True
+        // });
 
         // If we can request ads, we should initialize the Google Mobile Ads Unity plugin.
-        if (_consentController.CanRequestAds)
-        {
-            InitializeGoogleMobileAds();
-        }
+        // if (_consentController.CanRequestAds)
+        // {
+        // }
 
         // Ensures that privacy and consent information is up to date.
-        InitializeGoogleMobileAdsConsent();
+        //InitializeGoogleMobileAdsConsent();
     }
 
+
+    public void InitAds()
+    {
+        MobileAds.SetiOSAppPauseOnBackground(true);
+
+        MobileAds.RaiseAdEventsOnUnityMainThread = true;
+
+        if (PlayerPrefs.GetInt("Consent") == 1)
+            InitializeGoogleMobileAds();
+    }
     /// <summary>
     /// Ensures that privacy and consent information is up to date.
     /// </summary>
@@ -65,24 +68,26 @@ public class GoogleMobileAdsController : MonoBehaviour
     {
         Debug.Log("Google Mobile Ads gathering consent.");
 
-        _consentController.GatherConsent((string error) =>
-        {
-            if (error != null)
-            {
-                Debug.LogError("Failed to gather consent with error: " +
-                    error);
-            }
-            else
-            {
-                Debug.Log("Google Mobile Ads consent updated: "
-                    + ConsentInformation.ConsentStatus);
-            }
+        InitializeGoogleMobileAds();
 
-            if (_consentController.CanRequestAds)
-            {
-                InitializeGoogleMobileAds();
-            }
-        });
+
+        // _consentController.GatherConsent((string error) =>
+        // {
+        //     if (error != null)
+        //     {
+        //         Debug.LogError("Failed to gather consent with error: " +
+        //             error);
+        //     }
+        //     else
+        //     {
+        //         Debug.Log("Google Mobile Ads consent updated: "
+        //             + ConsentInformation.ConsentStatus);
+        //     }
+
+        //     if (_consentController.CanRequestAds)
+        //     {
+        //     }
+        // });
     }
 
     /// <summary>
@@ -151,19 +156,19 @@ public class GoogleMobileAdsController : MonoBehaviour
     /// <remarks>
     /// Your app needs to allow the user to change their consent status at any time.
     /// </remarks>
-    public void OpenPrivacyOptions()
-    {
-        _consentController.ShowPrivacyOptionsForm((string error) =>
-        {
-            if (error != null)
-            {
-                Debug.LogError("Failed to show consent privacy form with error: " +
-                    error);
-            }
-            else
-            {
-                Debug.Log("Privacy form opened successfully.");
-            }
-        });
-    }
+    // public void OpenPrivacyOptions()
+    // {
+    //     _consentController.ShowPrivacyOptionsForm((string error) =>
+    //     {
+    //         if (error != null)
+    //         {
+    //             Debug.LogError("Failed to show consent privacy form with error: " +
+    //                 error);
+    //         }
+    //         else
+    //         {
+    //             Debug.Log("Privacy form opened successfully.");
+    //         }
+    //     });
+    // }
 }

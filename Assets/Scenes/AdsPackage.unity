@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44402185, g: 0.49316466, b: 0.57223153, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -206,9 +206,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 711869863}
-        m_TargetAssemblyTypeName: AdsCaller, Assembly-CSharp
-        m_MethodName: ShowInterstitial
+      - m_Target: {fileID: 1581409311}
+        m_TargetAssemblyTypeName: AdsService, Assembly-CSharp
+        m_MethodName: ShowInterstitailAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -564,7 +564,6 @@ GameObject:
   - component: {fileID: 711869861}
   - component: {fileID: 711869860}
   - component: {fileID: 711869859}
-  - component: {fileID: 711869863}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -659,19 +658,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &711869863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 711869858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27d94d1f4c65dea42b15f7307a790b60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  adsService: {fileID: 1581409311}
 --- !u!1 &722906702
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,9 +741,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 711869863}
-        m_TargetAssemblyTypeName: AdsCaller, Assembly-CSharp
-        m_MethodName: HideBanner
+      - m_Target: {fileID: 1581409311}
+        m_TargetAssemblyTypeName: AdsService, Assembly-CSharp
+        m_MethodName: HideBannerAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1114,8 +1100,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 711869863}
-        m_TargetAssemblyTypeName: AdsCaller, Assembly-CSharp
+      - m_Target: {fileID: 1581409311}
+        m_TargetAssemblyTypeName: AdsService, Assembly-CSharp
         m_MethodName: ShowRewardedInterstitial
         m_Mode: 1
         m_Arguments:
@@ -1298,6 +1284,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1256438159}
   m_CullTransparentMesh: 1
+--- !u!1001 &1307660023
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 950828382555556903, guid: 5e281a7684c489744a991bb2a7c7453d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 950828382555556903, guid: 5e281a7684c489744a991bb2a7c7453d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 950828382555556903, guid: 5e281a7684c489744a991bb2a7c7453d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 950828382555556903, guid: 5e281a7684c489744a991bb2a7c7453d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 950828382555556903, guid: 5e281a7684c489744a991bb2a7c7453d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 950828382555556903, guid: 5e281a7684c489744a991bb2a7c7453d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 950828382555556903, guid: 5e281a7684c489744a991bb2a7c7453d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 950828382555556903, guid: 5e281a7684c489744a991bb2a7c7453d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 950828382555556903, guid: 5e281a7684c489744a991bb2a7c7453d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 950828382555556903, guid: 5e281a7684c489744a991bb2a7c7453d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7751595045109796592, guid: 5e281a7684c489744a991bb2a7c7453d, type: 3}
+      propertyPath: m_Name
+      value: Services
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210528425381449571, guid: 5e281a7684c489744a991bb2a7c7453d, type: 3}
+      propertyPath: _adsService
+      value: 
+      objectReference: {fileID: 1581409311}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5e281a7684c489744a991bb2a7c7453d, type: 3}
 --- !u!1 &1326560796
 GameObject:
   m_ObjectHideFlags: 0
@@ -1568,8 +1615,8 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!114 &1581409311 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2429937710763550380, guid: be1bfeca8e74cb04b88fbd2e627af48a, type: 3}
-  m_PrefabInstance: {fileID: 5391805920575986042}
+  m_CorrespondingSourceObject: {fileID: 6136736057653254008, guid: 5e281a7684c489744a991bb2a7c7453d, type: 3}
+  m_PrefabInstance: {fileID: 1307660023}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -1660,9 +1707,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 711869863}
-        m_TargetAssemblyTypeName: AdsCaller, Assembly-CSharp
-        m_MethodName: ShowBanner
+      - m_Target: {fileID: 1581409311}
+        m_TargetAssemblyTypeName: AdsService, Assembly-CSharp
+        m_MethodName: ShowBannerAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1793,8 +1840,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 711869863}
-        m_TargetAssemblyTypeName: AdsCaller, Assembly-CSharp
+      - m_Target: {fileID: 1581409311}
+        m_TargetAssemblyTypeName: AdsService, Assembly-CSharp
         m_MethodName: ShowRewardedAd
         m_Mode: 1
         m_Arguments:
@@ -1843,63 +1890,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112439969}
   m_CullTransparentMesh: 1
---- !u!1001 &5391805920575986042
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1885447191924711484, guid: be1bfeca8e74cb04b88fbd2e627af48a, type: 3}
-      propertyPath: m_Name
-      value: AdsService
-      objectReference: {fileID: 0}
-    - target: {fileID: 7257728628006680849, guid: be1bfeca8e74cb04b88fbd2e627af48a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 720
-      objectReference: {fileID: 0}
-    - target: {fileID: 7257728628006680849, guid: be1bfeca8e74cb04b88fbd2e627af48a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1280
-      objectReference: {fileID: 0}
-    - target: {fileID: 7257728628006680849, guid: be1bfeca8e74cb04b88fbd2e627af48a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7257728628006680849, guid: be1bfeca8e74cb04b88fbd2e627af48a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7257728628006680849, guid: be1bfeca8e74cb04b88fbd2e627af48a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7257728628006680849, guid: be1bfeca8e74cb04b88fbd2e627af48a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7257728628006680849, guid: be1bfeca8e74cb04b88fbd2e627af48a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7257728628006680849, guid: be1bfeca8e74cb04b88fbd2e627af48a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7257728628006680849, guid: be1bfeca8e74cb04b88fbd2e627af48a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7257728628006680849, guid: be1bfeca8e74cb04b88fbd2e627af48a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: be1bfeca8e74cb04b88fbd2e627af48a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1908,4 +1898,4 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 711869862}
   - {fileID: 710131169}
-  - {fileID: 5391805920575986042}
+  - {fileID: 1307660023}

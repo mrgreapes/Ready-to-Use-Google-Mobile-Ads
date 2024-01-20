@@ -43,17 +43,19 @@ public class AdsService : MonoBehaviour
     private AppOpenAdController _appOpenAdController;
     [SerializeField]
     private GoogleMobileAdsController _googleMobileAdsController;
-    [SerializeField]
-    private GoogleMobileAdsConsentController _googleMobileAdsConsentController;
-
     private void Awake()
     {
         InitializeAdUnitIds();
 
         if (_showAppOpenAd)
             _appOpenAdController.LoadAd();
+        if (PlayerPrefs.HasKey("Consent"))
+            if (_showBanner)
+                ShowBannerAd();
 
         AppStateEventNotifier.AppStateChanged += OnAppStateChanged;
+
+
     }
     public void InitializeAdUnitIds()
     {
@@ -107,12 +109,6 @@ public class AdsService : MonoBehaviour
     {
         return _googleMobileAdsController;
     }
-
-    public GoogleMobileAdsConsentController GoogleMobileAdsConsentController()
-    {
-        return _googleMobileAdsConsentController;
-    }
-
 
     public void ShowInterstitailAd()
     {

@@ -78,7 +78,6 @@ Transform:
   - {fileID: 8836078752945301806}
   - {fileID: 743041138867498375}
   - {fileID: 2708161761590401704}
-  - {fileID: 1068296171084672320}
   - {fileID: 5231122859292149323}
   - {fileID: 2321226633433409378}
   m_Father: {fileID: 0}
@@ -97,10 +96,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showInterstitial: 1
   _showBanner: 1
-  _showRewardedAd: 1
+  _showRewardedAd: 0
   _showAppOpenAd: 0
   _showRewardedInterstitial: 0
-  interstitalUnitId: ca-app-pub-3940256099942544/1033173712
+  interstitialUnitId: ca-app-pub-3940256099942544/1033173712
   bannerUnitId: ca-app-pub-3940256099942544/6300978111
   rewardedUnitId: ca-app-pub-3940256099942544/5224354917
   rewardedInterstitialUnitId: ca-app-pub-3940256099942544/5354046379
@@ -116,7 +115,6 @@ MonoBehaviour:
   _rewardedInterstitialAdController: {fileID: 7279928927434413883}
   _appOpenAdController: {fileID: 7399576611222136413}
   _googleMobileAdsController: {fileID: 5190919916396120171}
-  _googleMobileAdsConsentController: {fileID: 2188251638924557572}
 --- !u!1 &2586210940181149891
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,7 +203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390fea3e63f8f48bc967daef9e0b3cb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _consentController: {fileID: 2188251638924557572}
 --- !u!1 &3377336233734202794
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,50 +335,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b914fa3323ca480aacf51740a68ce63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &7659122712936778949
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1068296171084672320}
-  - component: {fileID: 2188251638924557572}
-  m_Layer: 0
-  m_Name: GoogleMobileAdsConsentController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1068296171084672320
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7659122712936778949}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7257728628006680849}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2188251638924557572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7659122712936778949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f72884a8871774cceb7b8464bec18009, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _privacyButton: {fileID: 0}
-  _errorPopup: {fileID: 0}
-  _errorText: {fileID: 0}
